@@ -41,8 +41,6 @@ export default function IndexPage() {
         {tools.map((tool, idx) =>
           <div key={idx}>            
             <Link
-              target="_blank"
-              rel="noreferrer"
               href={tool.link}
               className='text-primary flex flex-row gap-2'
             >
