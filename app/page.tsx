@@ -43,7 +43,7 @@ export default function IndexPage() {
             <Link
               href={tool.link}
               className='text-primary flex flex-row gap-2'
-            >
+            >              
               {tool.icon}
               <div className="relative after:absolute after:bg-primary after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300">{tool.name}</div>
             </Link>
