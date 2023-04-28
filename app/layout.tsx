@@ -43,7 +43,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
-              <div className="flex-1">{children}</div>
+              <div className="flex-1">
+                <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
+                  {children}
+                </section>
+              </div>
             </div>
             <TailwindIndicator />
           </ThemeProvider>
