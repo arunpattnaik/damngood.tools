@@ -6,12 +6,7 @@ import { Clipboard, ClipboardCheck, Loader2 } from "lucide-react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import { Controller, useForm } from "react-hook-form"
 
-import {
-    OpenGraphImageRequest,
-    OpenGraphImageSchema,
-    PrivacyPolicyRequest,
-    PrivacyPolicyRequestSchema,
-} from "@/lib/schema"
+import { OpenGraphImageRequest, OpenGraphImageSchema } from "@/lib/schema"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -38,7 +33,7 @@ export function GeneratorForm() {
         resolver: zodResolver(OpenGraphImageSchema),
     })
 
-    const [privacyPolicy, setPrivacyPolicy] = useState<string | null>(null)
+    const [template, setPrivacyPolicy] = useState<string | null>(null)
     const [generating, setGenerating] = useState<boolean>(false)
 
     const onSubmit = async (data: OpenGraphImageRequest) => {
@@ -56,10 +51,10 @@ export function GeneratorForm() {
 
             if (response.ok) {
                 const result = (await response.json()) as {
-                    privacyPolicy: string | null
+                    template: string | null
                 }
-                if (result.privacyPolicy) {
-                    return setPrivacyPolicy(result.privacyPolicy)
+                if (result.template) {
+                    return setPrivacyPolicy(result.template)
                 }
             }
 
@@ -83,30 +78,30 @@ export function GeneratorForm() {
                     className="flex flex-col gap-5 md:col-span-1"
                 >
                     <div className="grid w-full items-center gap-1.5">
-                        <Label htmlFor="title">Title</Label>
+                        <Label htmlFor="headline">Headline</Label>
                         <Input
                             type="url"
-                            id="title"
-                            placeholder="Enter title"
-                            {...register("title")}
+                            id="headline"
+                            placeholder="Enter headline"
+                            {...register("headline")}
                         />
-                        {errors.title && errors.title?.message && (
+                        {errors.headline && errors.headline?.message && (
                             <p className="text-sm text-destructive">
-                                {errors.title?.message}
+                                {errors.headline?.message}
                             </p>
                         )}
                     </div>
                     <div className="grid w-full items-center gap-1.5">
-                        <Label htmlFor="description">Company name</Label>
+                        <Label htmlFor="subheadline">Subheadline</Label>
                         <Input
                             type="text"
-                            id="description"
-                            placeholder="Enter description"
-                            {...register("description")}
+                            id="subheadline"
+                            placeholder="Enter subheadline"
+                            {...register("subheadline")}
                         />
-                        {errors.description && errors.description?.message && (
+                        {errors.subheadline && errors.subheadline?.message && (
                             <p className="text-sm text-destructive">
-                                {errors.description?.message}
+                                {errors.subheadline?.message}
                             </p>
                         )}
                     </div>
@@ -129,14 +124,14 @@ export function GeneratorForm() {
                         <Textarea
                             className="h-full w-full"
                             rows={10}
-                            placeholder="Once you enter and submit all the data, you will get your tailor-made privacy policy."
+                            placeholder="Once you enter and submit all the data, you will get your tailor-made Open Graph Image template."
                             id="openGraphImageTemplate"
-                            defaultValue={!privacyPolicy ? "" : privacyPolicy}
+                            defaultValue={!template ? "" : template}
                         />
                     </div>
                     <div className="flex w-full flex-row-reverse">
                         <CopyToClipboard
-                            text={!privacyPolicy ? "" : privacyPolicy}
+                            text={!template ? "" : template}
                             onCopy={() => {
                                 setCopied(true)
                             }}

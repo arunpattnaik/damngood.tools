@@ -9,3 +9,10 @@ export const PrivacyPolicyRequestSchema = z.object({
 })
 
 export type PrivacyPolicyRequest = z.infer<typeof PrivacyPolicyRequestSchema>;
+
+export const OpenGraphImageSchema = z.object({
+    headline: z.string().min(1),
+    subheadline: z.string().min(1),    
+})
+
+export type OpenGraphImageRequest = z.infer<typeof OpenGraphImageSchema>;
