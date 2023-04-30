@@ -13,27 +13,6 @@ export default function IndexPage() {
             icon: <FileCog2 />,
             link: "/tools/privacy-policy-generator",
         },
-        {
-            name: "Open Graph Images",
-            description:
-                "Generate a simple Open Graph image HTML and grab the HTML code in a few seconds.",
-            icon: <Image />,
-            link: "/tools/open-graph-image-template-generator",
-        },
-        {
-            name: "Screenshots",
-            description:
-                "Quickly test your website for popular screen dimensions.",
-            icon: <Aperture />,
-            link: "/tools/screenshots-for-dimensions",
-        },
-        {
-            name: "Geo Screenshots",
-            description:
-                "Quickly test how your website looks from different world locations.",
-            icon: <Globe />,
-            link: "/tools/geo-screenshots",
-        },
     ]
 
     return (
