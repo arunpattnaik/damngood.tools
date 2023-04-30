@@ -2,6 +2,12 @@ import { PageHeader } from "@/components/page-header";
 import { PrivacyPolicyForm } from "./PrivacyPolicyForm";
 import { AlertCircle } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Privacy Policy Generator',
+    description: 'Generate a privacy policy in a few seconds according to your preferences.'
+}
 
 export default function PrivacyPolicyGenerator() {
     return <>
