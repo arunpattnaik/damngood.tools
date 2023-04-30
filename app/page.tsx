@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { Aperture, FileCog2, Image } from "lucide-react"
+import { Aperture, FileCog2, Globe, Image } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { PageHeader } from "@/components/page-header"
 
@@ -23,6 +23,12 @@ export default function IndexPage() {
       description: 'Quickly test your website for popular screen dimensions.',
       icon: <Aperture />,
       link: '/tools/screenshots-for-dimensions'
+    },
+    {
+      name: 'Geo Screenshots',
+      description: 'Quickly test how your website looks from different world locations.',
+      icon: <Globe />,
+      link: '/tools/geo-screenshots'
     }
   ]
 

@@ -14,19 +14,28 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.0",
+    "@radix-ui/react-checkbox": "^1.0.3",
+    "@radix-ui/react-label": "^2.0.1",
+    "@radix-ui/react-select": "^1.2.1",
     "@radix-ui/react-separator": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.3",
+    "@upstash/redis": "^1.20.4",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "cmdk": "^0.2.0",
     "lucide-react": "0.105.0-alpha.4",
     "next": "^13.3.0",
     "next-themes": "^0.2.1",
+    "openai": "^3.2.1",
     "react": "^18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-day-picker": "^8.6.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.31.3",
     "tailwind-merge": "^1.12.0",
-    "tailwindcss-animate": "^1.0.5"
+    "tailwindcss-animate": "^1.0.5",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
