@@ -7,6 +7,12 @@ export type Screenshot = {
     device: string
 }
 
+export type UrlDataFont = {
+    first: string
+    fallback: string[],
+    elements: string[]
+}
+
 export type ScreenshotDevice = {
     name: string
     viewportWidth: number

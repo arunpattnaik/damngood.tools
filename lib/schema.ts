@@ -1,5 +1,10 @@
 import { z } from "zod"
 
+export const DetectFontsRequestSchema = z.object({
+    url: z.string().url(),
+})
+export type DetectFontsRequest = z.infer<typeof DetectFontsRequestSchema>
+
 export const GenerateScreenshotsRequestSchema = z.object({
     website: z.string().url(),
 })

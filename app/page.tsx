@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Aperture, FileCog2, Globe, Image } from "lucide-react"
+import { Aperture, FileCog2, FileType, Globe, Image } from "lucide-react"
 
 import { Separator } from "@/components/ui/separator"
 import { PageHeader } from "@/components/page-header"
@@ -13,13 +13,6 @@ export default function IndexPage() {
             icon: <FileCog2 />,
             link: "/tools/privacy-policy-generator",
         },
-        // {
-        //     name: "Open Graph Image HTML Template",
-        //     description:
-        //         "Generate a simple Open Graph image HTML template in seconds. And steal the code.",
-        //     icon: <Image />,
-        //     link: "/tools/open-graph-image-template-generator",
-        // },
         {
             name: "Screenshots",
             description:
@@ -27,13 +20,13 @@ export default function IndexPage() {
             icon: <Aperture />,
             link: "/tools/screenshots-for-dimensions",
         },
-        // {
-        //     name: "Geo Screenshots",
-        //     description:
-        //         "Quickly test how your website looks from different world locations.",
-        //     icon: <Globe />,
-        //     link: "/tools/geo-screenshots",
-        // },
+        {
+            name: "Fonts",
+            description:
+                "Quickly detect fonts used on any website and get links on how to install or download them.",
+            icon: <FileType />,
+            link: "/tools/detect-fonts",
+        },
     ]
 
     return (
