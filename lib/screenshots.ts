@@ -42,7 +42,7 @@ export function screenshotUrl(
         .blockCookieBanners(true)
         .blockAds(true)
         .cache(true)
-        .blockBannersByHeuristics(true)
+        .blockBannersByHeuristics(false)
         .cacheKey(cacheKey)
         .cacheTtl(cacheTtl)
         .reducedMotion(true)
