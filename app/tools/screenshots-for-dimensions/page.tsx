@@ -1,13 +1,18 @@
 import { PageHeader } from "@/components/page-header"
+import { Screenshots } from "./Screenshots"
+import { generateExampleScreenshots, generateScreenshots } from "@/lib/screenshots"
+import { screenshotExampleUrl } from "@/lib/shared";
 
-export default function ScreenshotsForDimensions() {
+export default async function ScreenshotsForDimensions() {
+    const exampleScreenshots = await generateExampleScreenshots();
+    
     return (
         <>
             <PageHeader
                 heading="Screenshots"
                 subheading="Quickly test your website for popular screen dimensions."
-            />
-            <div className="mt-10 flex max-w-[700px] flex-col gap-10"></div>
+            />                        
+            <Screenshots exampleScreenshots={exampleScreenshots} exampleScreenshotUrl={screenshotExampleUrl} />            
         </>
     )
 }

@@ -33,7 +33,7 @@ export function GeneratorForm() {
         resolver: zodResolver(OpenGraphImageSchema),
     })
 
-    const [template, setPrivacyPolicy] = useState<string | null>(null)
+    const [template, setTemplate] = useState<string | null>(null)
     const [generating, setGenerating] = useState<boolean>(false)
 
     const onSubmit = async (data: OpenGraphImageRequest) => {
@@ -54,7 +54,7 @@ export function GeneratorForm() {
                     template: string | null
                 }
                 if (result.template) {
-                    return setPrivacyPolicy(result.template)
+                    return setTemplate(result.template)
                 }
             }
 
@@ -80,7 +80,7 @@ export function GeneratorForm() {
                     <div className="grid w-full items-center gap-1.5">
                         <Label htmlFor="headline">Headline</Label>
                         <Input
-                            type="url"
+                            type="text"
                             id="headline"
                             placeholder="Enter headline"
                             {...register("headline")}
@@ -104,7 +104,7 @@ export function GeneratorForm() {
                                 {errors.subheadline?.message}
                             </p>
                         )}
-                    </div>
+                    </div>                    
                     <Button type="submit" disabled={generating}>
                         {generating ? (
                             <>
@@ -123,7 +123,7 @@ export function GeneratorForm() {
                         </Label>
                         <Textarea
                             className="h-full w-full"
-                            rows={10}
+                            rows={5}
                             placeholder="Once you enter and submit all the data, you will get your tailor-made Open Graph Image template."
                             id="openGraphImageTemplate"
                             defaultValue={!template ? "" : template}

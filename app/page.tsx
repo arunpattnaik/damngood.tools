@@ -13,6 +13,27 @@ export default function IndexPage() {
             icon: <FileCog2 />,
             link: "/tools/privacy-policy-generator",
         },
+        // {
+        //     name: "Open Graph Image HTML Template",
+        //     description:
+        //         "Generate a simple Open Graph image HTML template in seconds. And steal the code.",
+        //     icon: <Image />,
+        //     link: "/tools/open-graph-image-template-generator",
+        // },
+        {
+            name: "Screenshots",
+            description:
+                "Quickly test your website for popular screen dimensions.",
+            icon: <Aperture />,
+            link: "/tools/screenshots-for-dimensions",
+        },
+        // {
+        //     name: "Geo Screenshots",
+        //     description:
+        //         "Quickly test how your website looks from different world locations.",
+        //     icon: <Globe />,
+        //     link: "/tools/geo-screenshots",
+        // },
     ]
 
     return (
