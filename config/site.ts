@@ -11,6 +11,6 @@ export const siteConfig = {
     },
   ],
   links: {    
-    github: "https://github.com/krasun/damngood.tools",
+    github: "https://github.com/arunpattnaik/damngood.tools",
   },
 }
